@@ -1,0 +1,17 @@
+.container_column {
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: blueviolet;
+
+}
+
+.wrapper {
+  text-align: center;
+}
+
+.button {
+  top: 50%;
+}

@@ -1,0 +1,35 @@
+<mat-card align="center">
+  <mat-card-title>
+    <h1><mat-icon>person_outline</mat-icon>
+    Fichas de personas</h1>
+  </mat-card-title>
+  <mat-card-content>
+        <table align="center" width="100%" border="0" cellspacing="0" cellpadding="0" >
+          <tr class="color-font">
+            <th>DNI</th>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Opciones</th>
+          </tr>
+          <tr *ngFor="let persona of inicioService.agenda; let i=index">
+            <td align="center">{{persona.getDni()}}</td>
+            <td align="center">{{persona.getNombre()}}</td>
+            <td align="center">{{persona.getApellidos()}}</td>
+            <td align="center">
+              <button style="margin:5px;" mat-raised-button color="primary" (click)="borrarPersona(i)">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button style="margin:5px;" mat-raised-button color="primary" (click)="modificarPersona(i)">
+                <mat-icon>edit</mat-icon>
+              </button>
+            </td>
+          </tr>
+        </table>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-raised-button color="primary" (click)="agregarPersona()">
+      <mat-icon>person_add</mat-icon>
+      Agregar
+    </button>
+  </mat-card-actions>
+</mat-card>

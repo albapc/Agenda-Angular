@@ -1,0 +1,22 @@
+h1 {
+  color: blueviolet;
+}
+table, th, td {
+  border: 1px solid blueviolet;}
+
+.color-font {
+  color: blueviolet;
+}
+
+table {
+  width: 100%;}
+
+@media screen and (min-width: 800px) {
+  table {
+    width: 90%;}
+}
+
+@media screen and (min-width: 1000px) {
+  table {
+    width: 80%;}
+}
